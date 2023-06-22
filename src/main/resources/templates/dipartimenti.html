@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>homepage dipartimenti</title>
+</head>
+<body>
+	<h1>Dipartimenti</h1>
+<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Numero Corsi</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr th:each="dipartimento:${listadip}">
+				<td th:text="${dipartimento.nome}"></td>
+				<td th:text="${universita.numero corsi}"></td>
+				<th>
+				<button type="button" id="btnShowStud">Vedi Studenti</button>
+				<button type="button" id="btnAddStud">Aggiungi studente</button>
+				</th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

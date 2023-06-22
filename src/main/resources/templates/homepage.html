@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>homepage ateneo</title>
+</head>
+<body>
+	<h1>Atenei</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Nome Citta</th>
+				<th>Is Privata</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr th:each="universita:${lista}">
+				<td th:text="${universita.nome}"></td>
+				<td th:text="${universita.nomeCitta}"></td>
+				<td th:text="${universita.is_privata}"></td>
+				<th>
+				<button type="button" id="btnShowDip">Vedi Dipartimenti</button>
+				</th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
